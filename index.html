@@ -12,6 +12,29 @@
    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
-    테스트입니다
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+    
+    <script>
+        //
+        const swiper = new Swiper("main",{
+            speed: 500,
+            loop: true,
+            direction: "horizontal",
+            //direction: "vertical",
+            grabCursor: true,
+            //slidesPerView: 3, // 한화면에 보이는 리스트 갯수 / 기본 1
+            slidesPerView: "auto", // auto 로 할땐 크기지정 가능
+            spaceBetween: 30, // 슬라이드 사이 간격
+            centeredSlides: true, // 활성화 슬라이드의 중앙정렬
+        });
+    </script>
 </body>
 </html>
