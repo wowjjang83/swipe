@@ -12,15 +12,71 @@
    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <h1>DCODELAB</h1>
     <main>
         <section class="swiper-wrapper">
-            <article class="swiper-slide">1</article>
-            <article class="swiper-slide">2</article>
-            <article class="swiper-slide">3</article>
-            <article class="swiper-slide">4</article>
-            <article class="swiper-slide">5</article>
+            <!-- article.swiper-slide*5>.inner>.con>img[src="img/pic$.png" al="pic$"]+h2>lorem4^p>lorem10 -->
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.png" alt="" al="pic1">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, beatae!</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.png" alt="" al="pic2">
+                        <h2>Eaque nesciunt soluta esse.</h2>
+                        <p>Consequatur dolor aut incidunt quibusdam accusantium consequuntur, modi consectetur officiis.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.png" alt="" al="pic3">
+                        <h2>Optio architecto quasi repellat.</h2>
+                        <p>Vel suscipit, ullam expedita quas ipsum et molestias debitis quia?</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.png" alt="" al="pic4">
+                        <h2>Quibusdam provident officiis ad.</h2>
+                        <p>Facere, quos? Voluptatum atque voluptatibus quis officiis natus. Possimus, rem.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.png" alt="" al="pic5">
+                        <h2>Ad rerum voluptatum explicabo!</h2>
+                        <p>Saepe aut quia provident, tempore odit in ipsa atque iusto.Saepe aut quia provident, tempore odit in ipsa atque iusto.Saepe aut quia provident, tempore odit in ipsa atque iusto.Saepe aut quia provident, tempore odit in ipsa atque iusto.</p>
+                    </div>
+                </div>
+            </article>
+
         </section>
+
+        <nav class="swiper-pagination"></nav>
+
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
     </main>
+
+    <footer>
+        2023 DCODELAB &copy; All Rights Reserved.
+    </footer>
     
     <script>
         //
@@ -34,6 +90,22 @@
             slidesPerView: "auto", // auto 로 할땐 크기지정 가능
             spaceBetween: 30, // 슬라이드 사이 간격
             centeredSlides: true, // 활성화 슬라이드의 중앙정렬
+            pagination: {
+                el: ".swiper-pagination", // 페이지네이션 버튼 추가
+                //clickable: true, // 클릭가능여부
+                type: "fraction"
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            },
+            effect: "coverflow", // 효과
+            coverflowEffect: {
+                rottate: 50, // 슬라이드 회전각도
+                //stretch: -100, // 당겨지는 정도
+                depth: 200, // 슬라이드 뎁스
+                slideShadow: false, // 슬라이드 그림자
+            }
         });
     </script>
 </body>
